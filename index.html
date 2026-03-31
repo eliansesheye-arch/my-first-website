@@ -1,24 +1,75 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>my first website</title>
+        <title>My Portfolio</title>
         <style>body{
-            background-color:lightblue;
-            text-align:center;
+            background-color: #f4f4f4;
+            margin: 0;
             font-family:arial;
+        }
+        header{
+           background-color: #333;
+           color: white; 
+           padding: 15px;
+           text-align: center;
         } 
-        h1{
-            color: darkblue;
-        }</style>
+        section{
+            padding: 20px;
+            margin: 10px;
+            background: white;
+            border-radius: 10px;
+        }
+        h2{
+            color: #333;
+        } 
+        button{
+            padding: 10px;
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer; 
+        }
+        button:hover {
+            background: darkblue;
+        }    
+         </style>
     </head>
     <body>
-        <h1>welcome to my website</h1>
-        <p>my name is Elia Nsesheye Nkota</p>
-        <button onclick="sayHello()">click me</button>
+
+        <header>
+        <h1>My Portfolio</h1>
+        <p>web developer</p>
+        </header> 
+
+        <section>
+            <h2>About me</h2>
+            <p>Hello! my name is Elia Nsesheye Nkota. I am web developer</p>
+            <img src="elia.JPG"length="150" width="150">
+        </section>
+
+        <section>
+           <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Project</h2>
+            <p>Coming soon...</p>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+        <button onclick="showMessage()">Contact Me</button>
+        </section>
         <script>
-        funcion sayHello(){
-                alert("Hello! welcome to my website ");
+        function showMessage(){
+                alert("Email me at:eliansesheye@gmail.com");
             }
         </script>
+        
     </body>
 </html>
