@@ -1,74 +1,156 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>My Portfolio</title>
-        <style>body{
-            background-color: #f4f4f4;
-            margin: 0;
-            font-family:arial;
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Modern Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
         }
-        header{
-           background-color: #333;
-           color: white; 
-           padding: 15px;
-           text-align: center;
-        } 
-        section{
-            padding: 20px;
-            margin: 10px;
-            background: white;
-            border-radius: 10px;
-        }
-        h2{
-            color: #333;
-        } 
-        button{
-            padding: 10px;
-            background: blue;
+        header {
+            background: #343a40;
             color: white;
-            border: none;
-            cursor: pointer; 
+            padding: 60px 0;
+            text-align: center;
         }
-        button:hover {
-            background: darkblue;
-        }    
-         </style>
-    </head>
-    <body>
+        section {
+            padding: 60px 0;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .project-card{
+          width: 1000;
+          border: 50px;
+          height: 900px;
+          object-fit: cover;
+          box-shadow:0 10px 30px rgba(0,0,0,0.1);
+          transition:0.3s;
+        }
+        .project-card img:hover{
+          trnsform:scale(1.03);
+        }
+        .projects{
+          display: grid;
+          grid-template-columns: repeat(2,1fr);
+          gap: 30px;
+        }
+    </style>
+</head>
+<body>
 
-        <header>
-        <h1>My Portfolio</h1>
-        <p>web developer</p>
-        </header> 
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">My Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-        <section>
-            <h2>About me</h2>
-            <p>Hello! my name is Elia Nsesheye Nkota. I am web developer</p>
-        </section>
+<!-- Header -->
+<header>
+    <h1>Hi, I’m Elia Creative Tech</h1>
+    <p>Web Developer | Freelancer</p>
+    <a href="#projects" class="btn btn-primary mt-3">View My Work</a>
+</header>
 
-        <section>
-           <h2>Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
+<!-- About Section -->
+<section id="about" class="bg-light text-center">
+  <div class="container">
+    <h2>About Me</h2>
+    <p>Hello! I am Elia Creative Tech, a passionate web developer learning modern web technologies. I create clean, responsive websites and web apps.</p>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="text-center">
+  <div class="container">
+    <h2>Skills</h2>
+    <div class="row mt-4">
+      <div class="col-md-4"><i class="fab fa-html5 fa-3x"></i><p>HTML</p></div>
+      <div class="col-md-4"><i class="fab fa-css3-alt fa-3x"></i><p>CSS</p></div>
+      <div class="col-md-4"><i class="fab fa-js fa-3x"></i><p>JavaScript</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="bg-light text-center">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="row mt-4">
+      <div class="col-md-4 mb-3">
+        <div class="project-card">
+          <img src="calculator.png" class="card-img-top" alt="calculator" width="250" height="250"><img src="calculator2.png" class="card-img-top" alt="calculator" width="250" height="250">
+          <div class="card-body">
+            <h5 class="card-title">Smart Calculator App</h5>
+            <p class="card-text">A responsive calculator with keybord supportand dark mode.</p><ul>
+              <li>Clean UI design</li>
+              <li>Real-time calculation</li>
+              <li>keyboard input support</li>
             </ul>
-        </section>
+            <a href="#">Live Demo</a> <a href="#">View Code</a>
 
-        <section>
-            <h2>Project</h2>
-            <p>Coming soon...</p>
-        </section>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="project-card">
+          <img src="To do app.png" class="card-img-top" alt="To Do app" width="500" height="350">
+          <div class="card-body">
+            <h5 class="card-title">Task management App</h5>
+            <p class="card-text">A productive app with task filtering and local storage</p><ul>
+              <li>Add,delete,complete tasks</li>
+              <li>Persistent data (localStorage)</li>
+              <li>Smooth animations</li>
+            </ul>
+             <a href="#">Live Demo</a> <a href="#">View Code</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="project-card">
+          <img src="landing page.png" class="card-img-top" alt="landing page" height="350" width="700">  <img src="landing page2.png" class="card-img-top" alt="landing page" height="350" width="700">
+          <div class="card-body">
+            <h5 class="card-title">Bussiness land page</h5>
+            <p class="card-text">A modern land page designed to convert visitors into clients</p><ul>
+              <li>Responsive design </li>
+              <li>Scroll animation</li>
+              <li>Clean UI/UX</li>
+            </ul>
+             <a href="#">Live Demo</a> <a href="#">View Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <section>
-            <h2>Contact</h2>
-        <button onclick="showMessage()">Contact Me</button>
-        </section>
-        <script>
-        function showMessage(){
-                alert("Email me at:eliansesheye@gmail.com");
-            }
-        </script>
-        
-    </body>
+<!-- Contact Section -->
+<section id="contact" class="text-center">
+  <div class="container">
+    <h2>Contact Me</h2>
+    <p>If you want to hire me or collaborate, send me an email!</p>
+    <button class="btn btn-primary" onclick="alert('Email me at: eliansesheye@gmail.com')">Contact Me</button>
+  </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
